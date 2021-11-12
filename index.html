@@ -1,13 +1,11 @@
-<html>
-  
-</html>
+
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
+	<title>Sensors</title>
 	<!-- UIkit CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
 
@@ -16,12 +14,36 @@
 
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit-icons.min.js">
+  </script>
 
-	</script>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+
+  <div class="uk-container">
+
+    <canvas id="myChart"></canvas>
+
+  </div>
+
+  <div class="uk-container">
+
+    <table class="table"">
+      <thead> 
+        <tr>
+          <td>description</td> <td> id</td> <td>lat</td> <td>lng</td> <td>place</td> <td>readonly</td> <td>state-code</td> <td>value</td>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+
+      </tbody>
+    </table>
+
+  </div>
 	<div  class="uk-container uk-container-large">
 
 			<div id="sensor-description">description </div>
@@ -48,6 +70,7 @@
       </div>
     <div id="debug"></div>
 	</div>
+  <script src="chart.js"></script>
   <script src="sensor.js"></script>
 	<script src="script.js"></script>
 </body>

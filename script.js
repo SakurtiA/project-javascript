@@ -17,7 +17,7 @@ async function showSensori(){
 
   const response = await fetch("https://hf3xzw.deta.dev/")
   const data = await response.json()
-  console.log(data)
+  console.log(Object.keys(data.sensors[0]))
   
 
 
