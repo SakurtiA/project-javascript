@@ -37,9 +37,9 @@ function App(){
 
   
   <div className="App">
-
-    <button className="update" onClick={update} >update</button>
-    <h1 className="title">List of sensors :</h1>
+  <h1 className="title">List of sensors : {Object.keys(sensors).length}</h1>
+    <button className="button4" onClick={update} >update</button>
+  
 
     <div className="Sensor">
       

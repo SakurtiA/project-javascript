@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from "react";
 import style from "./sensor-module.css"
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Chart } from "chart.js";
 
 
 
@@ -11,14 +12,6 @@ const Sensors = ({description,id,lat,lng,place,readonly,state_code,value} ) => {
   
   
 
- async function changeState() {
-
-  return fetch(`https://hf3xzw.deta.dev/${id}/toggle`, {
-      method: 'PUT',
-  }).then(response => console.log(response))
-}
-
-
    const Stringvalue = value.toString();
 
 
@@ -27,8 +20,6 @@ const Sensors = ({description,id,lat,lng,place,readonly,state_code,value} ) => {
   return(
     
      <div className={style.sensor}>
-       <button onClick={changeState}> hey</button>
-      <button> map</button>
         <p>{description}</p>
         <p>{id}</p>
         <p>{lat}</p>
@@ -37,6 +28,8 @@ const Sensors = ({description,id,lat,lng,place,readonly,state_code,value} ) => {
         <p>{readonly}</p>
         <p>{state_code}</p>
         <p>{Stringvalue}</p>
+
+        
       
         
 
