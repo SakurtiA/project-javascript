@@ -17,11 +17,10 @@ async function showSensori(){
 
   const response = await fetch("https://hf3xzw.deta.dev/")
   const data = await response.json()
-  console.log(Object.keys(data.sensors[0]))
-  
+  const array_length = Object.keys(data.sensors[0])
 
 
-  for(let i = 0; i < 8; i++){
+  for(let i = 0; i < array_length.length ; i++){
     const sensore = JSONToSensor(data['sensors'][i])
     setContent("sensor-description", sensore.description)
     setContent("sensor-id", sensore.id)
@@ -37,3 +36,4 @@ async function showSensori(){
   } 
   
 }
+
