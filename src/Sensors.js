@@ -10,10 +10,9 @@ import { Chart } from "chart.js";
 const Sensors = ({description,id,lat,lng,place,readonly,state_code,value} ) => {
   
   
-  
+
 
    const Stringvalue = value.toString();
-
 
 
 

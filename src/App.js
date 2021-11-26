@@ -43,7 +43,7 @@ function App(){
 
     <div className="Sensor">
       
-    
+  
     {sensors.map(sensore => (
       
       < Sensors
